@@ -8,10 +8,6 @@ Make sure [Docker](https://www.docker.com/) and [yarn](https://yarnpkg.com/lang/
     yarn install
     yarn run watch
 
-Creata a database using:
-
-    docker-compose exec web python manage.py migrate
-
 Then create a superuser account using:
     docker-compose exec web python manage.py createsuperuser
 
