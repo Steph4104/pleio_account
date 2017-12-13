@@ -9,7 +9,7 @@ module.exports = {
     entry: {
         web: [
             "react-hot-loader/patch",
-            "webpack-dev-server/client?http://localhost:3001",
+            "webpack-dev-server/client?http://192.168.1.76:3001",
             "webpack/hot/only-dev-server",
             "./assets/js/Web.jsx"
         ]
@@ -18,7 +18,7 @@ module.exports = {
         path: path.resolve("./assets/bundles/"),
         filename: "[name].js",
         chunkFilename: "[id].js",
-        publicPath: "http://localhost:3001/assets/bundles/" // Tell Django to use this URL
+        publicPath: "http://192.168.1.76:3001/assets/bundles/" // Tell Django to use this URL
     },
     module: {
         rules: [
@@ -48,7 +48,7 @@ module.exports = {
         ]
     },
     devServer: {
-        publicPath: "http://localhost:3001/assets/bundles/",
+        publicPath: "http://192.168.1.76:3001/assets/bundles/",
         headers: { "Access-Control-Allow-Origin": "*" },
         hot: true,
         port: 3001
