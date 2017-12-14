@@ -1,6 +1,7 @@
 {% load render_bundle from webpack_loader %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
@@ -19,7 +20,7 @@
                 <div class="account__top-bar">
                     <div class="row">
                         <div class="col-xs-6">
-                            <a class="navigation__logo" title="{% trans "Back to the homepage" %}" href="https://www.pleio.nl/">{% include '_logo.html' %}</a>
+                            <a class="navigation__logo" title="{% trans "Back to the homepage" %}" href="https://www.pleio.nl/"><img src="{% static "images/gcconnex_icon_color.png" %}" width="100" height="100" alt="Gcconnex logo"/></a>
                         </div>
                         <div class="col-xs-6 end-xs">
                             <a href="/"><div class="account__close"></div></a>
